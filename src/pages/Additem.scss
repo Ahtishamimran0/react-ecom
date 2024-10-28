@@ -1,0 +1,139 @@
+@import "../scss/Color_root.scss";
+
+.cart_Item_Container {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+    width: 80%;
+
+    .cartTitle {
+        font-size: 1.6rem;
+
+        h1 {
+            font-weight: lighter;
+            color: #000000d5;
+        }
+    }
+
+    .cartTitle ::before {
+        content: '|';
+        font-weight: bold;
+        position: relative;
+        bottom: .3rem;
+        right: .2rem;
+        color: rgba(132, 176, 1, 0.823);
+    }
+
+    .cartNaming {
+        display: flex;
+        margin: 1rem 0;
+        padding: 1rem 0;
+        color: rgba(0, 0, 0, 0.523);
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(192, 192, 192, 0.71);
+
+        p {
+            margin-left: .5rem;
+        }
+    }
+
+    .cartItemslist {
+        border-bottom: 2px solid rgba(192, 192, 192, 0.71);
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            height: 7.7rem;
+            width: 7rem;
+            padding: 1rem 1rem;
+            mix-blend-mode: color-burn;
+        }
+
+        .cartDetail {
+            display: flex;
+            align-items: center;
+            width: 76%;
+            justify-content: space-between;
+
+        }
+
+        .addBtn {
+            border: none;
+            background: none;
+        }
+
+        .addRemove {
+            background: none;
+            border-radius: 1rem;
+            color: $color1;
+            font-weight: bold;
+            border: none;
+            margin-right: 1.5rem;
+            font-size: 2rem;
+            width: 4rem;
+        }
+
+        .qty {
+            margin: 0 1rem;
+        }
+    }
+
+    .continueBtn {
+        width: 16rem;
+        height: 3rem;
+        color: #fff;
+        border: none;
+        background: $color;
+    }
+
+    .cartTotal {
+        background: rgba(177, 177, 177, 0.143);
+        width: 25rem;
+        padding: 1rem 2rem;
+
+        span {
+            color: #000000bb;
+        }
+
+        hr {
+            width: 14rem;
+
+        }
+
+        p {
+            position: relative;
+            bottom: 1.6rem;
+            left: 14rem;
+            width: 5.5rem;
+        }
+
+        .clearBtn {
+            font-weight: lighter;
+            width: 19rem;
+            margin-left: 1rem;
+            height: 3rem;
+            color: #fff;
+            border: none;
+            background: $color1;
+
+            span {
+                color: #fff;
+                position: relative;
+                top: .1rem;
+                left: .1rem;
+            }
+        }
+
+    }
+}
+
+@media(max-width:600px) {
+    .cart_Item_Container {
+        width: 100%;
+        padding: 0 1rem;
+
+        .cartNaming {
+            font-size: 1.3rem;
+        }
+    }
+}
